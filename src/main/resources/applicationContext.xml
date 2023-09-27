@@ -7,12 +7,12 @@
     <context:property-placeholder location="classpath:application.properties"/>
 
     <bean id="musicBean"
-          class="by.flameksandr.ClassicalMusic"/>
+          class="by.flameksandr.ClassicalMusic" init-method="initialization" destroy-method="destruction"/>
 
-    <bean id="musicPlayer" class="by.flameksandr.MusicPlayer" scope="prototype">
-        <property name="music" ref="musicBean"/>
-        <property name="name" value="${music.name}"/>
-        <property name="volume" value="${music.volume}"/>
-    </bean>
+<!--    <bean id="musicPlayer" class="by.flameksandr.MusicPlayer" scope="prototype">-->
+<!--        <property name="music" ref="musicBean"/>-->
+<!--        <property name="name" value="${music.name}"/>-->
+<!--        <property name="volume" value="${music.volume}"/>-->
+<!--    </bean>-->
 
 </beans>
