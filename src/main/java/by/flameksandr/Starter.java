@@ -8,7 +8,6 @@ public class Starter {
 
         ClassicalMusic music = context.getBean("musicBean", ClassicalMusic.class);
         System.out.println(music.getSong());
-        context.close();
 
 //        MusicPlayer musicPlayer1 = context.getBean("musicPlayer", MusicPlayer.class);
 //        MusicPlayer musicPlayer2 = context.getBean("musicPlayer", MusicPlayer.class);
@@ -16,5 +15,8 @@ public class Starter {
 //        System.out.println(musicPlayer1);
 //        System.out.println(musicPlayer2);
 //        System.out.println(musicPlayer1==musicPlayer2);
+
+        context.close();
+
     }
 }
