@@ -1,6 +1,7 @@
 package by.flameksandr;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("musicPlayer")
@@ -17,7 +18,9 @@ public class MusicPlayer {
     public void setVolume(int volume) {
         this.volume = volume;
     }
+
     @Autowired
+    @Qualifier("classicalMusic")
     public void setMusic(Music music) {
         this.music = music;
     }
