@@ -1,5 +1,9 @@
 package by.flameksandr;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("musicPlayer")
 public class MusicPlayer {
 
     private String name;
@@ -13,7 +17,7 @@ public class MusicPlayer {
     public void setVolume(int volume) {
         this.volume = volume;
     }
-
+    @Autowired
     public void setMusic(Music music) {
         this.music = music;
     }

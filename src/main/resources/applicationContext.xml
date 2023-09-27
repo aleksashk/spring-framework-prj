@@ -4,18 +4,8 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-    <context:property-placeholder location="classpath:application.properties"/>
+    <context:component-scan base-package="by.flameksandr"/>
 
-    <bean id="musicBean"
-          class="by.flameksandr.ClassicalMusic"
-          init-method="initialization"
-          destroy-method="destruction"
-          factory-method="getClassicalMusic"/>
 
-<!--    <bean id="musicPlayer" class="by.flameksandr.MusicPlayer" scope="prototype">-->
-<!--        <property name="music" ref="musicBean"/>-->
-<!--        <property name="name" value="${music.name}"/>-->
-<!--        <property name="volume" value="${music.volume}"/>-->
-<!--    </bean>-->
 
 </beans>
