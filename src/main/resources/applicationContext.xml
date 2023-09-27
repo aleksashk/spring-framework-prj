@@ -7,7 +7,10 @@
     <context:property-placeholder location="classpath:application.properties"/>
 
     <bean id="musicBean"
-          class="by.flameksandr.ClassicalMusic" init-method="initialization" destroy-method="destruction"/>
+          class="by.flameksandr.ClassicalMusic"
+          init-method="initialization"
+          destroy-method="destruction"
+          factory-method="getClassicalMusic"/>
 
 <!--    <bean id="musicPlayer" class="by.flameksandr.MusicPlayer" scope="prototype">-->
 <!--        <property name="music" ref="musicBean"/>-->

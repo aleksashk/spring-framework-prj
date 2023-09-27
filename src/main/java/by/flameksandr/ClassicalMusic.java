@@ -1,12 +1,20 @@
 package by.flameksandr;
 
-public class ClassicalMusic implements Music{
+public class ClassicalMusic implements Music {
 
-    public void initialization(){
+    private ClassicalMusic() {
+    }
+
+    public static ClassicalMusic getClassicalMusic() {
+        System.out.println("factory-method running");
+        return new ClassicalMusic();
+    }
+
+    public void initialization() {
         System.out.println("Initialization");
     }
 
-    public void destruction(){
+    public void destruction() {
         System.out.println("Destruction");
     }
 
