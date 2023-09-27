@@ -1,18 +1,11 @@
 package by.flameksandr;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("classicalMusic")
-@Scope(value = "prototype")
 public class ClassicalMusic implements Music {
 
-    private ClassicalMusic() {
-    }
-
-    public static ClassicalMusic getClassicalMusic() {
-        System.out.println("factory-method running");
-        return new ClassicalMusic();
+    public ClassicalMusic() {
     }
 
     public void initialization() {
