@@ -6,4 +6,8 @@
     <bean id="musicBean"
           class="by.flameksandr.ClassicalMusic"/>
 
+    <bean id="musicPlayer" class="by.flameksandr.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
+
 </beans>
