@@ -1,8 +1,10 @@
 package by.flameksandr;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("classicalMusic")
+@Scope(value = "singleton")
 public class ClassicalMusic implements Music {
 
     private ClassicalMusic() {

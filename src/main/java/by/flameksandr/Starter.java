@@ -11,6 +11,10 @@ public class Starter {
         System.out.println(musicPlayer.getName());
         System.out.println(musicPlayer.getVolume());
 
+        ClassicalMusic music1 = context.getBean("classicalMusic", ClassicalMusic.class);
+        ClassicalMusic music2 = context.getBean("classicalMusic", ClassicalMusic.class);
+
+        System.out.println(music1 == music2);
         context.close();
 
     }
