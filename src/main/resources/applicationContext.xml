@@ -9,7 +9,7 @@
     <bean id="musicBean"
           class="by.flameksandr.ClassicalMusic"/>
 
-    <bean id="musicPlayer" class="by.flameksandr.MusicPlayer">
+    <bean id="musicPlayer" class="by.flameksandr.MusicPlayer" scope="prototype">
         <property name="music" ref="musicBean"/>
         <property name="name" value="${music.name}"/>
         <property name="volume" value="${music.volume}"/>
